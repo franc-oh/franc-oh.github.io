@@ -2,10 +2,10 @@
 # --- 기본설정 --- #
 ############################
 
-# Name of website
-title: 200 OK!
+# 블로그 타이틀 (헤더 상단에 홈링크)
+title: 5 Francs - Dev & Life
 
-# Your name to show in the footer
+# 유저이름 (푸터에 노출)
 author: Franc Oh
 
 
@@ -19,9 +19,8 @@ round-avatar: true
 # --- 네비게이션 바 구성 --- #
 ###############################################
 navbar-links:
+  Category : "tags" # TODO - 카테고리 탭 따로 구현하기
   About: "aboutme"
-  Tags : "tags"
-  # TODO - 카테고리 탭 구현하기
 
 ########################################
 # 푸터에 배치된 소셜네트워크 설정
