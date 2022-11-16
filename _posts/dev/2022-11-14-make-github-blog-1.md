@@ -10,6 +10,13 @@ comments: true
 published: true
 ---
 
+### 차례
+
+[1. 깃허브 블로그에 대한 이해와 블로그 개발환경 구축](/2022-11-14-make-github-blog-1)  
+[2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)
+
+<br/>
+<br/>
 
 ## 1. 깃허브 페이지와 깃허브 블로그
 
@@ -20,7 +27,8 @@ published: true
 
 **깃허브 블로그** 또한 블로그 웹 사이트를 개발하여, 깃허브 페이지를 통해 호스팅하는 방식으로 만들어진다.
 
-<br/><br/>
+<br/>
+<br/>
 
 ## 2. 블로그 개발환경 셋팅 (MacOS 기반)
 
@@ -69,15 +77,14 @@ rbenv Ruby 설치 전, 설치 가능한 Ruby 버젼을 확인한다.
 
 ![Ruby Version](https://drive.google.com/uc?export=view&id=16HeyrAxkUDri1qq77GKVaJZYZMDiWh6H)
 
-<br>
+<br/>
 
 버젼을 골라 설치한다.  
 `$ rbenv install 3.1.2`
 
-<br>
+<br/>
 
-설치를 완료했다면, 아래 명령어를 통해 설치 결과를 확인한다.  
-여전히 System Ruby로 설정된 상태지만, 신규 설치된 rbenv Ruby도 함께 보인다.
+설치를 완료했다면, 아래 명령어를 통해 설치 결과를 확인한다.
 
 ```zsh
 # 입력
@@ -88,7 +95,9 @@ $ rbenv version
   3.1.2 (set by /Users/xxx/.rbenv/version)
 ```
 
-<br>
+여전히 System Ruby로 설정된 상태지만, 신규 설치된 rbenv Ruby도 함께 보인다.
+
+<br/>
 
 명령어를 통해 Ruby 설정을 rbenv Ruby로 변경해준다.
 
@@ -101,7 +110,7 @@ $ rbenv global 3.1.2
 * 3.1.2 (set by /Users/xxx/.rbenv/version)
 ```
 
-<br>
+<br/>
 
 마지막으로 쉘 설정 파일(.zshrc, .bashrc)에 rbenv PATH를 추가해준다.
 
@@ -118,7 +127,7 @@ $ vim ~/.zshrc
 $ source ~/.zshrc
 ```
 
-<br>
+<br/>
 
 ### 2-3. Jekyll 설치
 명령어를 차례대로 입력하여 Jekyll을 설치한다.
@@ -130,7 +139,8 @@ $ gem install webrick
 
 Jekyll 설치를 완료했다면, 깃허브 블로그를 만들기 위한 준비가 모두 끝난 것이다.
 
-<br><br>
+<br/>
+<br/>
 
 ## 🔎 참고
 - [https://jojoldu.tistory.com/288](https://jojoldu.tistory.com/288)
