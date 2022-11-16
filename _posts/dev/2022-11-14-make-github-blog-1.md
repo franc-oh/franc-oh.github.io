@@ -54,7 +54,7 @@ rbenv Ruby 설치 전, 설치 가능한 Ruby 버젼을 확인한다.
 <br>
 `$ rbenv install -l`
 <br>
-![Ruby Version](https://drive.google.com/file/d/16HeyrAxkUDri1qq77GKVaJZYZMDiWh6H/view?usp=drivesdk)
+![Ruby Version](https://drive.google.com/uc?export=view&id=16HeyrAxkUDri1qq77GKVaJZYZMDiWh6H)
 <br><br><br>
 버젼을 골라 설치한다.
 <br>
