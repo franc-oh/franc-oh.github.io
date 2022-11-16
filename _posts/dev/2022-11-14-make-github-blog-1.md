@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 깃허브 블로그 만들기 [1/2]
+title: '깃허브 블로그 만들기 [1/2]'
 subtitle: 깃허브 블로그에 대한 이해와 블로그 개발환경 구축
 gh-repo: franc-oh/franc-oh.github.io/actions
-tags: [(대분류) DEV, (소분류) git/github]
+tags:
+  - (대분류) DEV
+  - (소분류) git/github
 comments: true
-#cover-img: /assets/img/2022-11-14-make-github-blog/main.jpeg
-#thumbnail-img: /assets/img/2022-11-14-make-github-blog/main.jpeg
-#share-img: /assets/img/2022-11-14-make-github-blog/main.jpeg
+published: true
 ---
 
 
@@ -54,7 +54,7 @@ rbenv Ruby 설치 전, 설치 가능한 Ruby 버젼을 확인한다.
 <br>
 `$ rbenv install -l`
 <br>
-![Ruby Version](/assets/img/2022-11-14-make-github-blog-1/1.png)
+![Ruby Version](https://drive.google.com/file/d/16HeyrAxkUDri1qq77GKVaJZYZMDiWh6H/view?usp=drivesdk)
 <br><br><br>
 버젼을 골라 설치한다.
 <br>
