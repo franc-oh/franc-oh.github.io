@@ -10,7 +10,9 @@ comments: true
 published: true
 ---
 
-### 차례
+<br/>
+
+### 시리즈
 
 [1. 깃허브 블로그에 대한 이해와 블로그 개발환경 구축](/2022-11-14-make-github-blog-1)  
 [2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)
@@ -109,7 +111,7 @@ published: true
 모듈 설치가 모두 끝났다면 다음 명령어를 통해 Jekyll 서버를 실행시킨다.  
 `$ bundle exec jekyll serve`
 
-![Jekyll Server Run1](https://drive.google.com/uc?export=view&id=1ezZHUX16TvENcHqnXfVQUZ_55LmAX99q)
+![Jekyll Server Run1](https://drive.google.com/uc?export=view&id=1dv8U6MPJdKiUTcz4YrrGrSkZiuGk-c1g)
 
 ❓ `in 'require': cannot load such file -- webrick (LoadError)` 에러 발생 시  
 &nbsp;&nbsp;&nbsp;&nbsp; ⇒ `$ bundle add webrick` 명령어 실행 후 Jekyll 서버 재실행
@@ -118,7 +120,7 @@ published: true
 
 http://localhost:4000 으로 접속하면 내가 적용한 테마의 블로그 화면이 나타난다.
 
-![Jekyll Server Run2](https://drive.google.com/uc?export=view&id=1wL4WRSccaPPV-ak55u2M8nrb4LMPQm9r)
+![Jekyll Server Run2](https://drive.google.com/uc?export=view&id=1k_NOl13W-wSPsOMVneIHmZ3uCqZ1Ll9o)
 
 <br/>
 
