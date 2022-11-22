@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '깃허브 블로그 만들기 [2/2]'
+title: '깃허브 블로그 만들기 [2/3]'
 subtitle: 블로그 웹 페이지 구현과 호스팅
 gh-repo: franc-oh/franc-oh.github.io/actions
 tags:
@@ -10,18 +10,17 @@ comments: true
 published: true
 ---
 
-<br/>
-
 ### 시리즈
 
 [1. 깃허브 블로그에 대한 이해와 블로그 개발환경 구축](/2022-11-14-make-github-blog-1)  
-[2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)
+[2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)  
+[3. 블로그 커스텀, 포스팅, 편의기능 붙이기](/_ready/dev/2022-11-18-make-github-blog-3.md)
 
 <br/>
 
 ## 1. Jekyll 테마
 
-- - -
+---
 
 ### 1.1 Jekyll 테마 선택
 
@@ -90,7 +89,7 @@ published: true
 
 ## 2. 개발 및 배포
 
-- - -
+---
 
 현재 깃허브 저장소에 내 블로그가 만들어진 상태다.  
 이제 남은 일은 블로그 타이틀 등의 기본정보 수정 및 메뉴 구성과 같은 커스텀 작업과, 블로그 글 작성 뿐이다.
@@ -172,7 +171,5 @@ http://localhost:4000 으로 접속하면 내가 적용한 테마의 블로그 �
 <br/>
 
 ## 🔎 참고
-- [https://jojoldu.tistory.com/288](https://jojoldu.tistory.com/288)
-- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/)
-- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-2/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-2/)
+- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/)
 - [https://www.irgroup.org/posts/jekyll-chirpy/](https://www.irgroup.org/posts/jekyll-chirpy/)

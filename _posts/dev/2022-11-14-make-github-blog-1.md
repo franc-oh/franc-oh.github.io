@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '깃허브 블로그 만들기 [1/2]'
+title: '깃허브 블로그 만들기 [1/3]'
 subtitle: 깃허브 블로그에 대한 이해와 블로그 개발환경 구축
 gh-repo: franc-oh/franc-oh.github.io/actions
 tags:
@@ -9,20 +9,18 @@ tags:
 comments: true
 published: true
 ---
-
-<br/>
-
+  
 ### 시리즈
 
 [1. 깃허브 블로그에 대한 이해와 블로그 개발환경 구축](/2022-11-14-make-github-blog-1)  
-[2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)
+[2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)  
+[3. 블로그 커스텀, 포스팅, 편의기능 붙이기](/_ready/dev/2022-11-18-make-github-blog-3.md)
 
-<br/>
 <br/>
 
 ## 1. 깃허브 페이지와 깃허브 블로그
 
-- - -
+---
 
 **깃허브 페이지**는 깃허브의 `{username}.github.io` 저장소에 있는 정적 웹 문서들을 무료로 호스팅 해주는 서비스로,
 `https://{username}.github.io` 주소를 가진 나만의 웹 사이트를 만들 수 있다.  
@@ -34,7 +32,7 @@ published: true
 
 ## 2. 블로그 개발환경 셋팅 (MacOS 기반)
 
-- - -
+---
 
 깃허브 블로그를 만들기 위해선 먼저 **Jekyll**과 **Ruby**를 설치해야 한다.
 
@@ -146,6 +144,5 @@ Jekyll 설치를 완료했다면, 깃허브 블로그를 만들기 위한 준비
 
 ## 🔎 참고
 - [https://jojoldu.tistory.com/288](https://jojoldu.tistory.com/288)
-- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/)
-- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-2/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-2/)
+- [https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners/](https://wlqmffl0102.github.io/posts/Making-Git-blogs-for-beginners-1/)
 - [https://www.irgroup.org/posts/jekyll-chirpy/](https://www.irgroup.org/posts/jekyll-chirpy/)
