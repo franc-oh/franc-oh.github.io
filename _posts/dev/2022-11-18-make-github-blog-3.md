@@ -29,8 +29,6 @@ published: true
 커스텀에 앞서, 내려받은 프로젝트 구조에 대해 간략히 알아본다.  
 Jekyll 테마를 적용했다면 기본적인 구조는 아래와 같을 것이다.
 
-<br/>
-
 |파일명|설명|  
 |:-----:|:-----|
 | **_config.yml** | - 해당 블로그에 대한 기본 설정정보를 관리한다. <br/> - 기본적으로 이 곳의 설정을 고치는 것만으로, 웬만한 커스텀 작업이 끝난다.|   
@@ -142,8 +140,7 @@ published: true
 테마에 따라 헤더에 설정할 수 있는 항목에 차이가 있을 수 있다.  
 가장 좋은 방법은, 테마에서 샘플로 제공하는 글을 참고하는 방법이다.
 
-글의 본문은 마크다운 형식으로 작성, 마크다운 작성법은 <u>[여기](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95)
-</u>를 참조한다.  
+글의 본문은 마크다운 형식으로 작성, 마크다운 작성법은 [여기](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95) 를 참조한다.  
 이렇게 작성한 글을 깃허브에 푸시하면 블로그 포스팅이 완료된 것이다.
 
 <br/>
@@ -161,9 +158,9 @@ published: true
 
 현재 내 블로그는 포스팅만 가능한 상황으로, 다음과 같은 점을 개선해야 한다.
 
-1. 누군가 내 글에 댓글을 남길 수 있어야 한다.
-2. 내 블로그가 포털사이트에서 검색 되어야 한다.
-3. 방문자 수, 조회 수를 집계하고 수치를 확인할 수 있어야 한다.
+1. **누군가 내 글에 댓글을 남길 수 있어야 한다.**
+2. **내 블로그가 포털사이트에서 검색 되어야 한다.**
+3. **내 블로그의 방문 현황을 집계하고 수치를 확인할 수 있어야 한다.**
 4. 블로그에 광고를 붙여 수익을 창출할 수 있어야 한다.
 
 네이버 블로그나 티스토리와 같은 블로그 사이트에서는 신경쓰지 않았던 점들을, 깃허브 블로그에서는 직접 구현해야 한다.  
@@ -242,23 +239,20 @@ disqus: "'shortname' 기입"
 
 국내에서 많이 사용하는 검색엔진은 '네이버'와 '구글'이다.  
 두 포털사이트 모두 별도의 서비스를 통해 내 블로그가 검색엔진에 노출되도록 설정할 수 있는데,  
-구글은 [여기](https://search.google.com/search-console/welcome) , 네이버는 [여기](https://searchadvisor.naver.com/) 에서 설정할 수 있다.
+구글은 [여기](https://search.google.com/search-console/welcome) 에서 설정할 수 있다.
 
 <br/>
-
-**[구글]**  
 
 'Google Search Console'에 접속 > 'URL 접두어'에서 본인 블로그 URL을 기입하고 [계속]  
 ![google-search-console1](https://drive.google.com/uc?export=view&id=1loBMmdxFp9W4_nu1Kg6ttdTtnQzb3yu7)
 
 <br/>
 
-본인 블로그 URL을 기입하면, 본인 소유인지 소유권을 확인하는 작업을 거쳐야 한다.  
+본인 블로그 URL을 기입하면, 해당 도메인이 본인 소유인지 인증하는 절차를 거쳐야 한다.  
 소유권을 인증하는 방법은 여러 방법이 있지만, 구글에서 제시한 html 파일을 본인 블로그 소스에 넣어 인증하는 방법을 많이 사용한다.  
 
-구글에서 제시한 html 파일을 다운 > 본인 소스에 업로드(루트 디렉토리) > 'Git Push'를 한다.  
-![google-search-console2](https://drive.google.com/uc?export=view&id=1S8-ZlcdMQcOLpAn4ab0B1NY2l8gAT9ZF)
-
+구글에서 제시한 html 파일을 다운 > 본인 소스에 업로드(Root 디렉토리) > 'Git Push'를 한다.  
+![google-search-console2](https://drive.google.com/uc?export=view&id=1S8-ZlcdMQcOLpAn4ab0B1NY2l8gAT9ZF)  
 ![google-search-console3](https://drive.google.com/uc?export=view&id=1H28UBn8XKtzSoNOeBMSOf3K1Ylfo46DN)
 
 <br/>
@@ -280,14 +274,14 @@ Git 저장소에 푸시까지 했다면, '소유권 확인' 화면으로 가서 
 `$ bundle install`
 
 'jekyll-sitemap'이 설치된 것을 확인할 수 있다.
-![google-search-console4](https://drive.google.com/uc?export=view&id=1iqQl-9eCDQskFvRhP5SCIyOX2fSYAvhw)
+![google-search-console5](https://drive.google.com/uc?export=view&id=1iqQl-9eCDQskFvRhP5SCIyOX2fSYAvhw)
 
 <br/>
 
 Jekyll 서버를 재기동한 후, `http://localhost:4000/sitemap.xml` 로 접속한다.  
 XML형식이 보인다면, 'Gemfile'과 동일한 위치에 `sitemap.xml` 파일을 생성하여 헤당 내용 전체를 붙여넣는다.
 
-마지막으로 같은 위치에 `robots.txt` 파일을 생성하여 아래 내용을 입력, Git 저장소에 Push한다.
+마지막으로 같은 위치에 `robots.txt` 파일을 생성하여 아래 내용을 입력, Git 저장소에 Push한다.  
 
 ```text
 
@@ -300,9 +294,85 @@ Sitemap: https://{본인의 깃허브페이지 url}/sitemap.xml
 
 <br/>
 
+깃 저장소에 Push가 완료됐다면, [Google-Search-Console](https://search.google.com/search-console?hl=ko) 에서, 아래와 같이 Sitemap.xml을 제출한다.  
+
+![google-search-console5](https://drive.google.com/uc?export=view&id=1_ppa_gwUK8VmmJMITXX31wYF76A2tri9)
+
+심사 등의 이유로 포털에 검색되기까지 몇 일 걸린다고 한다.  
+일정기간 후 구글 검색창에 `site:{username}.github.io` 를 검색해서 결과를 확인한다.  
+정상적으로 등록됐다면 본인의 블로그가 검색될 것이다.
+
+(네이버의 경우 [여기](https://searchadvisor.naver.com/) 를 통해 설정)
+
+<br/>
+
+### 3-3. 집계/분석 기능 연동
+
+내 블로그에 '얼마나 많은 사람이 방문했고, 언제/어떤 글을 많이 봤는 지' 등을 집계하고 데이터를 분석해주는 기능을 붙이려 한다.  
+이 기능을 지원하는 툴로는 대표적으로 [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision) 가 있으며, 이 기능 역시 대부분의 Jekyll 테마가 설정을 통한 간단한 연동을 지원한다.
+
+```yaml
+
+###### ex. Beautiful Jekyll의 _config.yml
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
+
+# Fill in your Google Analytics ID to track your website using Google Analytics
+google_analytics: ""
+
+# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
+#cloudflare_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+```
+
+위 설정을 보면 Google Analytics 연동을 위해 '측정_ID'가 필요하다고 적혀있는데,  
+가입 후에 부여받는 ID이기 때문에, 일단 가입부터 한다.  
+
+<br/>
+
+'계정이름'은 식별이 가능한 문구를 기입한다.  
+(ex. 'my-gh-blog')
+![google-analytics1](https://drive.google.com/uc?export=view&id=1T6fcTvIh6UbUUQxZcKe4vT4BlH-ViC9Z)
+
+'속성 설정'은 아래와 같이 기입/설정 후 [고급 옵션 보기] 클릭
+![google-analytics2](https://drive.google.com/uc?export=view&id=1OkyIAPHR30L2FbOIrKnF4IaatIeHgYQn)
+
+'유니버설 애널리틱스 속성'을 활성화 후, 아래 형식으로 주소 기입하고 [다음] 클릭
+![google-analytics3](https://drive.google.com/uc?export=view&id=1YXvkg2q08hKIlAr_w_Xhs1nktcfNilbd)
+
+어떤목적으로 사용하는지에 대해 묻는 단계로, 의도에 맞게 설정한다.
+![google-analytics4](https://drive.google.com/uc?export=view&id=19v3bHJbjPL6xitcOmvF-D6CErz3Oqcv9)
+
+마지막으로 약관 동의만 하면 생성이 완료되는데, 아래와 같이 '측정 ID' 또한 생성되었다.  
+이 아이디를 복사하여 설정에 붙여준다.
+![google-analytics5](https://drive.google.com/uc?export=view&id=1LUFMkE8X0eoVBpupcQMjE-Nt46ZjUSQp)
+
+```yaml
+
+###### ex. Beautiful Jekyll의 _config.yml
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Fill in your Google Analytics ID to track your website using Google Analytics
+google_analytics: "측정 ID"
+
+```
+
+<br/>
 
 
-### 3-3. Google Analytics
+
+
 
 <br/>
 
