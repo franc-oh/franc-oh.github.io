@@ -14,7 +14,7 @@ published: true
 
 [1. 깃허브 블로그에 대한 이해와 블로그 개발환경 구축](/2022-11-14-make-github-blog-1)  
 [2. 블로그 웹 페이지 구현과 호스팅](/2022-11-16-make-github-blog-2)  
-[3. 블로그 커스텀, 포스팅, 편의기능 붙이기](/_ready/dev/2022-11-18-make-github-blog-3.md)
+[3. 블로그 커스텀, 포스팅, 편의기능 붙이기](/2022-11-18-make-github-blog-3)
 
 <br/>
 
