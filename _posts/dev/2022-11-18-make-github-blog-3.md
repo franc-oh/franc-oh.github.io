@@ -257,13 +257,50 @@ disqus: "'shortname' 기입"
 소유권을 인증하는 방법은 여러 방법이 있지만, 구글에서 제시한 html 파일을 본인 블로그 소스에 넣어 인증하는 방법을 많이 사용한다.  
 
 구글에서 제시한 html 파일을 다운 > 본인 소스에 업로드(루트 디렉토리) > 'Git Push'를 한다.  
-(인증 전까진 '소유권 확인' 창을 닫지 않는다.)  
 ![google-search-console2](https://drive.google.com/uc?export=view&id=1S8-ZlcdMQcOLpAn4ab0B1NY2l8gAT9ZF)
 
 ![google-search-console3](https://drive.google.com/uc?export=view&id=1H28UBn8XKtzSoNOeBMSOf3K1Ylfo46DN)
 
- 
 <br/>
+
+Git 저장소에 푸시까지 했다면, '소유권 확인' 화면으로 가서 [확인]을 누른다.  
+아래와 같이 소유권 확인이 완료됐음을 알 수 있다.
+![google-search-console4](https://drive.google.com/uc?export=view&id=18FLzpn1AIFb9JLh86uoq1-6GJ6EUfaFw)
+
+<br/>
+
+소유권을 인증했다면 포털사이트가 내 블로그를 크롤링할 수 있도록 `sitemap`을 생성해야한다.  
+프로젝트에 있는 `Gemfile`으로 가서 아래 문구를 입력한다. 
+
+`$ gem 'jekyll-sitemap'`
+
+<br/>
+
+그 다음 터미널에서 아래 명령어를 입력한다.  
+`$ bundle install`
+
+'jekyll-sitemap'이 설치된 것을 확인할 수 있다.
+![google-search-console4](https://drive.google.com/uc?export=view&id=1iqQl-9eCDQskFvRhP5SCIyOX2fSYAvhw)
+
+<br/>
+
+Jekyll 서버를 재기동한 후, `http://localhost:4000/sitemap.xml` 로 접속한다.  
+XML형식이 보인다면, 'Gemfile'과 동일한 위치에 `sitemap.xml` 파일을 생성하여 헤당 내용 전체를 붙여넣는다.
+
+마지막으로 같은 위치에 `robots.txt` 파일을 생성하여 아래 내용을 입력, Git 저장소에 Push한다.
+
+```text
+
+User-agent: *
+Allow: /
+
+Sitemap: https://{본인의 깃허브페이지 url}/sitemap.xml
+
+```
+
+<br/>
+
+
 
 ### 3-3. Google Analytics
 
