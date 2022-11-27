@@ -333,8 +333,8 @@ google_analytics: ""
 
 ```
 
-위 설정을 보면 Google Analytics 연동을 위해 '측정_ID'가 필요하다고 적혀있는데,  
-가입 후에 부여받는 ID이기 때문에, 일단 가입부터 한다.  
+위 설정을 보면 Google Analytics 연동을 위해 추적_ID가 필요하다고 적혀있는데,  
+가입 후에 부여받기 때문에, 일단 가입부터 한다.  
 
 <br/>
 
@@ -351,9 +351,15 @@ google_analytics: ""
 어떤목적으로 사용하는지에 대해 묻는 단계로, 의도에 맞게 설정한다.
 ![google-analytics4](https://drive.google.com/uc?export=view&id=19v3bHJbjPL6xitcOmvF-D6CErz3Oqcv9)
 
-마지막으로 약관 동의만 하면 생성이 완료되는데, 아래와 같이 '측정 ID' 또한 생성되었다.  
-이 아이디를 복사하여 설정에 붙여준다.
-![google-analytics5](https://drive.google.com/uc?export=view&id=1LUFMkE8X0eoVBpupcQMjE-Nt46ZjUSQp)
+마지막으로 약관 동의만 하면 생성이 완료되는데, 추적_ID는 다음과 같이 찾을 수 있다.   
+![google-analytics5](https://drive.google.com/uc?export=view&id=1mUvN1uOvAgkHM45gCn9AYQvRCkrKjyRc)  
+![google-analytics6](https://drive.google.com/uc?export=view&id=129JskuRduWG7QGdGeME6EmRtQ8aHC0xL)  
+![google-analytics7](https://drive.google.com/uc?export=view&id=1p6l2Wd1CpWz0RaVoiDl-N6IT3U3JpeKJ)  
+![google-analytics8](https://drive.google.com/uc?export=view&id=15bngwXAA1JF1K4yquKrHZy-NmSg6hIGK)  
+
+<br/>
+
+추적ID를 아래 `_config.yml`에 붙여넣고, Git 저장소에 푸시한다.
 
 ```yaml
 
@@ -370,13 +376,18 @@ google_analytics: "측정 ID"
 
 <br/>
 
+푸시 후 블로그에 접속해본다.  
+아래와 같이 방문 내역이 집계되는 걸 확인할 수 있다.
 
+![google-analytics9](https://drive.google.com/uc?export=view&id=1Jt4bz8g7V79YAH3KjTXQjD0q07M950Fb)
 
-
+현재는 단순히 '언제/어디에/얼마나' 방문했는지 정도만 집계되는 상태다.   
+하지만 별도의 작업을 통해 '행동 패턴' 등의 딥한 데이터 수집도 가능하니, 뜻이 있다면 이를 적절히 활용하도록 한다.
 
 <br/>
 
-### 3-4. 블로그 광고 붙이기
+이 외에도 블로그에 광고를 노출해, 수익을 창출할 수 있는 'Google Adsense' 도 연동이 가능하다.  
+나의 경우 포스팅 수가 너무 적으면 승인이 안난다는 얘기가 있어서 추후 적용 할 예정이다.
 
 <br/>
 <br/>
