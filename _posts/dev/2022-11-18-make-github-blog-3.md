@@ -279,7 +279,8 @@ Git 저장소에 푸시까지 했다면, '소유권 확인' 화면으로 가서 
 <br/>
 
 Jekyll 서버를 재기동한 후, `http://localhost:4000/sitemap.xml` 로 접속한다.  
-XML형식이 보인다면, 'Gemfile'과 동일한 위치에 `sitemap.xml` 파일을 생성하여 헤당 내용 전체를 붙여넣는다.
+XML형식이 보인다면, 'Gemfile'과 동일한 위치에 `sitemap.xml` 파일을 생성하여 해당 내용 전체를 붙여넣는다.  
+(본문의 'http://localhost:4000'은 본인 깃허브-페이지 URL로 변경한다.)
 
 마지막으로 같은 위치에 `robots.txt` 파일을 생성하여 아래 내용을 입력, Git 저장소에 Push한다.  
 
