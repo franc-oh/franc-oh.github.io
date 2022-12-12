@@ -1,27 +1,18 @@
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in site.posts %}
     <url>
-        <loc>https://franc-oh.github.io/2022-11-14-make-github-blog-1/</loc>
-        <lastmod>2022-11-14T00:00:00+09:00</lastmod>
+        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
     </url>
+    {% endfor %}
+
+    {% for page in site.pages %}
+    {% if page.layout != nil %}
+    {% if page.layout != 'feed' %}
     <url>
-        <loc>https://franc-oh.github.io/2022-11-16-make-github-blog-2/</loc>
-        <lastmod>2022-11-16T00:00:00+09:00</lastmod>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
     </url>
-    <url>
-        <loc>https://franc-oh.github.io/2022-11-18-make-github-blog-3/</loc>
-        <lastmod>2022-11-18T00:00:00+09:00</lastmod>
-    </url>
-    <url>
-        <loc>https://franc-oh.github.io/aboutme/</loc>
-    </url>
-    <url>
-        <loc>https://franc-oh.github.io/</loc>
-    </url>
-    <url>
-        <loc>https://franc-oh.github.io/tags/</loc>
-    </url>
-    <url>
-        <loc>https://franc-oh.github.io/google5b211f5aa811ee47.html</loc>
-        <lastmod>2022-11-27T14:20:26+09:00</lastmod>
-    </url>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
 </urlset>

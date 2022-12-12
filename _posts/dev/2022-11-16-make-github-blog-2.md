@@ -2,10 +2,9 @@
 layout: post
 title: '깃허브 블로그 만들기 [2/3]'
 subtitle: 블로그 웹 페이지 구현과 호스팅
-gh-repo: franc-oh/franc-oh.github.io/actions
+category: dev
 tags:
-  - (대분류) DEV
-  - (소분류) git/github
+- git|github
 comments: true
 published: true
 ---

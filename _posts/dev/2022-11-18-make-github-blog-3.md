@@ -2,10 +2,9 @@
 layout: post
 title: '깃허브 블로그 만들기 [3/3]'
 subtitle: 블로그 커스텀, 포스팅, 편의기능 붙이기
-gh-repo: franc-oh/franc-oh.github.io/actions
+category: dev
 tags:
-  - (대분류) DEV
-  - (소분류) git/github
+- git|github
 comments: true
 published: true
 ---
@@ -295,7 +294,7 @@ Sitemap: https://{본인의 깃허브페이지 url}/sitemap.xml
 
 <br/>
 
-깃 저장소에 Push가 완료됐다면, [Google-Search-Console](https://search.google.com/search-console?hl=ko) 에서, 아래와 같이 Sitemap.xml을 제출한다.  
+깃 저장소에 Push가 완료됐다면, [Google-Search-Console](https://search.google.com/search-console?hl=ko) 에서, 아래와 같이 sitemap.xml을 제출한다.  
 
 ![google-search-console5](https://drive.google.com/uc?export=view&id=1_ppa_gwUK8VmmJMITXX31wYF76A2tri9)
 

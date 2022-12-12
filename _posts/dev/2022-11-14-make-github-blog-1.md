@@ -2,10 +2,9 @@
 layout: post
 title: '깃허브 블로그 만들기 [1/3]'
 subtitle: 깃허브 블로그에 대한 이해와 블로그 개발환경 구축
-gh-repo: franc-oh/franc-oh.github.io/actions
+category: dev
 tags:
-  - (대분류) DEV
-  - (소분류) git/github
+  - git|github
 comments: true
 published: true
 ---
