@@ -237,8 +237,9 @@ disqus: "'shortname' 기입"
 이런 문제는 각 포탈사이트가 제공하는 서비스와 연동하여 해결할 수 있다.
 
 국내에서 많이 사용하는 검색엔진은 '네이버'와 '구글'이다.  
-두 포털사이트 모두 별도의 서비스를 통해 내 블로그가 검색엔진에 노출되도록 설정할 수 있는데,  
+두 포털사이트 모두 별도의 서비스를 통해 내 블로그가 검색엔진에 노출되도록 설정할 수 있는데,
 구글은 [여기](https://search.google.com/search-console/welcome) 에서 설정할 수 있다.
+(네이버의 경우 [여기](https://searchadvisor.naver.com/))
 
 <br/>
 
@@ -262,24 +263,54 @@ Git 저장소에 푸시까지 했다면, '소유권 확인' 화면으로 가서 
 
 <br/>
 
-소유권을 인증했다면 포털사이트가 내 블로그를 크롤링할 수 있도록 `sitemap`을 생성해야한다.  
-프로젝트에 있는 `Gemfile`으로 가서 아래 문구를 입력한다. 
+소유권을 인증했다면 구글에서 내 블로그를 크롤링할 수 있도록 `sitemap`을 생성해야한다.  
 
-`$ gem 'jekyll-sitemap'`
+Root 디렉토리에 아래와 같이 sitemap.xml을 생성한다.  
+('---' 의 내용도 포함되어야 한다.)
+
+```xml
+
+---
+layout: null
+sitemap:
+exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in site.posts %}
+    {% unless post.published == false %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        {% if post.sitemap.lastmod %}
+        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+        {% elsif post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        {% if post.sitemap.changefreq %}
+        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+        {% else %}
+        <changefreq>monthly</changefreq>
+        {% endif %}
+        {% if post.sitemap.priority %}
+        <priority>{{ post.sitemap.priority }}</priority>
+        {% else %}
+        <priority>0.5</priority>
+        {% endif %}
+    </url>
+    {% endunless %}
+    {% endfor %}
+</urlset>
+
+```
 
 <br/>
 
-그 다음 터미널에서 아래 명령어를 입력한다.  
-`$ bundle install`
-
-'jekyll-sitemap'이 설치된 것을 확인할 수 있다.
-![google-search-console5](https://drive.google.com/uc?export=view&id=1iqQl-9eCDQskFvRhP5SCIyOX2fSYAvhw)
+Jekyll 서버를 재기동한 후, `http://localhost:4000/sitemap.xml` 로 접속하여 자신이 포스팅한 글들이 노출되는지 확인한다.
+![google-search-console7](https://drive.google.com/uc?export=view&id=1BOl9eEUB3qVf1Mv27Zl7KszyQcWjb26a)
 
 <br/>
-
-Jekyll 서버를 재기동한 후, `http://localhost:4000/sitemap.xml` 로 접속한다.  
-XML형식이 보인다면, 'Gemfile'과 동일한 위치에 `sitemap.xml` 파일을 생성하여 해당 내용 전체를 붙여넣는다.  
-(본문의 'http://localhost:4000'은 본인 깃허브-페이지 URL로 변경한다.)
 
 마지막으로 같은 위치에 `robots.txt` 파일을 생성하여 아래 내용을 입력, Git 저장소에 Push한다.  
 
@@ -298,11 +329,28 @@ Sitemap: https://{본인의 깃허브페이지 url}/sitemap.xml
 
 ![google-search-console5](https://drive.google.com/uc?export=view&id=1_ppa_gwUK8VmmJMITXX31wYF76A2tri9)
 
-심사 등의 이유로 포털에 검색되기까지 몇 일 걸린다고 한다.  
-일정기간 후 구글 검색창에 `site:{username}.github.io` 를 검색해서 결과를 확인한다.  
-정상적으로 등록됐다면 본인의 블로그가 검색될 것이다.
+처음 등록할 때는 '알수없음', '실패' 등의 내용으로 보여지게 된다.  
+등록 후 실제 구글에 노출되기까지 한 달 넘게 걸리는 경우도 있다고 한다.  
+구글에 노출됐다면 검색창에 `site:{username}.github.io`로 검색 시 본인의 블로그가 검색될 것이다. 
 
-(네이버의 경우 [여기](https://searchadvisor.naver.com/) 를 통해 설정)
+<br/>
+
+<b> sitemap 변경사항 빨리 갱신시키기 </b>
+
+sitemap을 제출하게 되면 구글 검색봇이 xml을 읽어가서 검색되도록 처리한다. 
+
+![google-search-console8](https://drive.google.com/uc?export=view&id=1qBtDGIbOUcYc28V8sV3TXLcoxeGnlf_T)
+(검색봇이 읽은 날짜가 위와 같이 표시된다.)
+
+처음 sitemap을 제출한 상황이라면 제출과 동시에 검색봇이 읽었기 때문에 처리를 기다리면 되지만,
+이미 sitemap을 제출한 상황에서 xml을 수정하게 되는 경우 변경사항을 검색봇이 바로 읽지 않는 경우가 많다.  
+
+이런 경우 아래 URL을 통해 검색봇을 직접 호출해서 읽도록 할 수 있다.  
+`https://www.google.com/ping?sitemap=https://{username}.github.io/sitemap.xml`
+
+![google-search-console9](https://drive.google.com/uc?export=view&id=1gT_JL9UGNNJmN0NCd3QQkqw-_nbTJq3N)
+
+해당 URL을 통해 Ping을 보내면 48시간 이내에 검색봇이 방문하게 된다.
 
 <br/>
 
@@ -387,7 +435,7 @@ google_analytics: "측정 ID"
 <br/>
 
 이 외에도 블로그에 광고를 노출해, 수익을 창출할 수 있는 'Google Adsense' 도 연동이 가능하다.  
-나의 경우 포스팅 수가 너무 적으면 승인이 안난다는 얘기가 있어서 추후 적용 할 예정이다.
+(포스팅 수가 너무 적으면 승인이 안날 수도 있다고 한다.)
 
 <br/>
 <br/>
